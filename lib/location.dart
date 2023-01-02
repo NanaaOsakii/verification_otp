@@ -109,8 +109,8 @@ class _MyLocationState extends State<MyLocation> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("images/h.png",
-                width: 250,
-                height: 250,
+                width: 200,
+                height: 200,
               ),
               SizedBox(
                 height: 30,
