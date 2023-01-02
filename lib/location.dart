@@ -108,16 +108,16 @@ class _MyLocationState extends State<MyLocation> {
 
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/5.jpg",
-                width: 150,
-                height: 150,
+              Image.asset("images/h.png",
+                width: 250,
+                height: 250,
               ),
               SizedBox(
                 height: 30,
               ),
               Text(
                 "MY LOCATION", textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.cyan,),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.blueAccent[200],),
               ),
               SizedBox(
                 height: 30,
@@ -129,8 +129,60 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1, color: Colors.grey),
+                    border: Border.all(width: 3, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 5,
+                      child: TextField(
+                        controller: countryController,
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "ADDRESS  1",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+
+
+                    Text(' ${_currentPosition?.latitude ?? ""}'),
+                    Text(': ${_currentPosition?.longitude ?? ""}'),
+                    Text(' ${_currentAddress ?? ""}'),
+                    const SizedBox(height: 32),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                        child: TextField(
+                          keyboardType: TextInputType.streetAddress,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+
+                          ),
+                        ),),
+
+                  ],
+                ),
+              ),
+
+              Container(
+
+                height: 55,
+                decoration: BoxDecoration(
+
+                    border: Border.all(width: 3, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10)),
+
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -149,27 +201,170 @@ class _MyLocationState extends State<MyLocation> {
                       ),
                     ),
                     Text(
-                      "ADDRESS",
+                      "ADDRESS 2  : ",
                       style: TextStyle(color: Colors.grey),
                     ),
-                    Text(' ${_currentPosition?.latitude ?? ""}'),
-                    Text(': ${_currentPosition?.longitude ?? ""}'),
-                    Text(' ${_currentAddress ?? ""}'),
+
                     const SizedBox(height: 32),
                     SizedBox(
                       width: 10,
                     ),
                     Expanded(
-                        child: TextField(
-                          keyboardType: TextInputType.streetAddress,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
+                      child: TextField(
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
 
-                          ),
-                        ))
+                        ),
+                      ),),
+
                   ],
                 ),
               ),
+
+              Container(
+
+                height: 55,
+                decoration: BoxDecoration(
+
+                    border: Border.all(width: 3, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10)),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 5,
+                      child: TextField(
+                        controller: countryController,
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "TOWN/CITY :",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+
+
+
+                    const SizedBox(height: 32),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: TextField(
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+
+                        ),
+                      ),),
+
+                  ],
+                ),
+              ),
+
+              Container(
+
+                height: 55,
+                decoration: BoxDecoration(
+
+                    border: Border.all(width: 3, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10)),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 5,
+                      child: TextField(
+                        controller: countryController,
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "COUNTRY    :",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: TextField(
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+
+                        ),
+                      ),),
+
+                  ],
+                ),
+              ),
+
+              Container(
+
+                height: 55,
+                decoration: BoxDecoration(
+
+                    border: Border.all(width: 3, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10)),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 5,
+                      child: TextField(
+                        controller: countryController,
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "POST CODE :",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+
+
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: TextField(
+                        keyboardType: TextInputType.streetAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+
+                        ),
+                      ),),
+
+                  ],
+                ),
+              ),
+
+
               Container(
                 child: Column(
 
@@ -179,19 +374,18 @@ class _MyLocationState extends State<MyLocation> {
                       height: 10,
                     ),
 
-
-
-
-                    ElevatedButton(
+                    SizedBox(
+                      width: double.infinity, height: 45,
+                      child: ElevatedButton(
                       onPressed: _getCurrentPosition,
                       child: const Text("Get Your Current Location",) ,
 
-
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.cyan.shade300,
+                          primary: Colors.blueAccent[200],
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
+    ),
 
                   ],
                 ),
@@ -229,12 +423,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 60,
               ),
               Column(
-
-
                 children: [
-
-
-
                   TextButton(
 
 
@@ -250,20 +439,12 @@ class _MyLocationState extends State<MyLocation> {
                       Icons.arrow_forward_ios_rounded,
                       color: Colors.black,
 
-
-
                     ),
 
 
 
                   ),
-
-
-
                 ],
-
-
-
 
               ),
 

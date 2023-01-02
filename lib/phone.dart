@@ -28,16 +28,16 @@ class _MyPhoneState extends State<MyPhone> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/otp.jpg",
-                width: 150,
-                height: 150,
+              Image.asset("images/ot.png",
+                width: 250,
+                height: 250,
               ),
               SizedBox(
                 height: 25,
               ),
               Text(
                 "Phone Verification",
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.cyan),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.blueAccent[200]),
               ),
               SizedBox(
                 height: 10,
@@ -99,7 +99,7 @@ class _MyPhoneState extends State<MyPhone> {
                 height: 45,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.cyan.shade300,
+                        primary: Colors.blueAccent[200],
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
                     onPressed: () {
@@ -109,6 +109,7 @@ class _MyPhoneState extends State<MyPhone> {
               )
             ],
           ),
+
         ),
       ),
     );

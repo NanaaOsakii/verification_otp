@@ -30,10 +30,7 @@ class _MySuccesState extends State<MySucces> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
-      appBar: AppBar(
-        title: Text('Welcome to D-ONE'),
-        backgroundColor:Colors.cyan,
-      ),
+
 
       body: Center(
         child: Column(
@@ -41,28 +38,58 @@ class _MySuccesState extends State<MySucces> {
           children: [
             AnimatedTextKit(
               animatedTexts: [
-
                 ScaleAnimatedText(
-                  'Congratulation !',
-                  textStyle: TextStyle(fontSize: 32.0, fontFamily: 'Bobbers'),
+                  'Your registration was successful !',
+                  textStyle: TextStyle(fontSize: 24.0, fontFamily: 'Bobbers',fontWeight: FontWeight.bold,color: Colors.blueAccent[200],),
                 ),
 
               ],
             ),
+            SizedBox(
+              height: 100,
+            ),
 
-
-            Image.asset("images/7.jpg",height: 300,),
+            Image.asset("images/illustration-1.png",width: 240,),
             SizedBox(
               height: 10,
             ),
-            Text("Your registration was successful!", textAlign: TextAlign.center,
+
+            Text("", textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueAccent[200],
               ),
             ),
+            Column(
+              children: [
+                TextButton(
 
+
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      'succes',
+                          (route) => false,
+                    );
+                  },
+
+                  child: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+
+                  ),
+
+
+
+                ),
+              ],
+
+            ),
           ],
+
         ),
+
       ),
     );
   }
