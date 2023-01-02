@@ -80,13 +80,16 @@ class _MyLocationState extends State<MyLocation> {
 
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
-
-
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              'phone',
+                  (route) => false,
+            );
           },
           icon: Icon(
             Icons.arrow_back_ios_rounded,
@@ -97,8 +100,6 @@ class _MyLocationState extends State<MyLocation> {
       ),
 
       body: Container(
-
-
 
         margin: EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
@@ -151,6 +152,10 @@ class _MyLocationState extends State<MyLocation> {
                       "ADDRESS",
                       style: TextStyle(color: Colors.grey),
                     ),
+                    Text(' ${_currentPosition?.latitude ?? ""}'),
+                    Text(': ${_currentPosition?.longitude ?? ""}'),
+                    Text(' ${_currentAddress ?? ""}'),
+                    const SizedBox(height: 32),
                     SizedBox(
                       width: 10,
                     ),
@@ -173,10 +178,9 @@ class _MyLocationState extends State<MyLocation> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text('LAT: ${_currentPosition?.latitude ?? ""}'),
-                    Text('LNG: ${_currentPosition?.longitude ?? ""}'),
-                    Text('ADDRESS: ${_currentAddress ?? ""}'),
-                    const SizedBox(height: 32),
+
+
+
 
                     ElevatedButton(
                       onPressed: _getCurrentPosition,
@@ -237,7 +241,7 @@ class _MyLocationState extends State<MyLocation> {
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        'phone',
+                        'succes',
                             (route) => false,
                       );
                     },

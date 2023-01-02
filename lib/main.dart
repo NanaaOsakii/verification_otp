@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phone_otp_ui/phone.dart';
+import 'package:phone_otp_ui/succes.dart';
 import 'package:phone_otp_ui/verify.dart';
 
 
@@ -16,6 +17,7 @@ void main() {
       'phone': (context) => MyPhone(),
       'verify': (context) => MyVerify(),
       'location': (context) => MyLocation(),
+      'succes': (context) => MySucces(),
 
 
     },
