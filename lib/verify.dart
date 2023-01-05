@@ -36,7 +36,7 @@ class _MyVerifyState extends State<MyVerify> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue[50],
+      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,

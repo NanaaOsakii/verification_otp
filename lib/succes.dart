@@ -29,7 +29,7 @@ class _MySuccesState extends State<MySucces> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlue[50],
+      backgroundColor: Colors.white,
 
 
       body: Center(
@@ -39,8 +39,8 @@ class _MySuccesState extends State<MySucces> {
             AnimatedTextKit(
               animatedTexts: [
                 ScaleAnimatedText(
-                  'Your registration was successful !',
-                  textStyle: TextStyle(fontSize: 24.0, fontFamily: 'Bobbers',fontWeight: FontWeight.bold,color: Colors.blueAccent[200],),
+                  'Your registration was successful',
+                  textStyle: TextStyle(fontSize: 25.0, fontFamily: 'Bobbers',fontWeight: FontWeight.bold,color: Colors.blueAccent[200],),
                 ),
 
               ],

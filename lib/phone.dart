@@ -20,7 +20,7 @@ class _MyPhoneState extends State<MyPhone> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlue[50],
+      backgroundColor: Colors.white,
       body: Container(
         margin: EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,

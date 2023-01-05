@@ -79,7 +79,7 @@ class _MyLocationState extends State<MyLocation> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue[50],
+      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -109,7 +109,7 @@ class _MyLocationState extends State<MyLocation> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("images/h.png",
-                width: 200,
+                width: 300,
                 height: 200,
               ),
               SizedBox(
@@ -129,7 +129,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 3, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -180,7 +180,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 3, color: Colors.grey),
+                    border: Border.all(width: 1 , color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -227,7 +227,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 3, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -276,7 +276,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 3, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -322,7 +322,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 3, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -363,7 +363,6 @@ class _MyLocationState extends State<MyLocation> {
                   ],
                 ),
               ),
-
 
               Container(
                 child: Column(
