@@ -129,7 +129,7 @@ class _MyLocationState extends State<MyLocation> {
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.black),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -174,13 +174,14 @@ class _MyLocationState extends State<MyLocation> {
                   ],
                 ),
               ),
+              const SizedBox(height: 10),
 
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1 , color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.black),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -221,13 +222,13 @@ class _MyLocationState extends State<MyLocation> {
                   ],
                 ),
               ),
-
+              const SizedBox(height: 10),
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.black),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -270,13 +271,13 @@ class _MyLocationState extends State<MyLocation> {
                   ],
                 ),
               ),
-
+              const SizedBox(height: 10),
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.black),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -316,13 +317,13 @@ class _MyLocationState extends State<MyLocation> {
                   ],
                 ),
               ),
-
+              const SizedBox(height: 10),
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1, color: Colors.grey),
+                    border: Border.all(width: 1, color: Colors.black),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Row(
@@ -363,7 +364,7 @@ class _MyLocationState extends State<MyLocation> {
                   ],
                 ),
               ),
-
+              const SizedBox(height: 10),
               Container(
                 child: Column(
 
@@ -384,7 +385,7 @@ class _MyLocationState extends State<MyLocation> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
-    ),
+                   ),
 
                   ],
                 ),
@@ -392,7 +393,7 @@ class _MyLocationState extends State<MyLocation> {
 
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
 
               Row(
