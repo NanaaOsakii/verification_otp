@@ -5,6 +5,12 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
 
+
+
+
+
+
+
     <application
         android:label="verif_otp"
         android:name="${applicationName}"
