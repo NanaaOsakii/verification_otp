@@ -40,6 +40,7 @@ class _MyVerifyState extends State<MyVerify> {
     );
      var code ="";
     return Scaffold(
+
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -54,6 +55,7 @@ class _MyVerifyState extends State<MyVerify> {
         ),
         elevation: 0,
       ),
+
       body: Container(
         margin: EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
@@ -107,15 +109,16 @@ class _MyVerifyState extends State<MyVerify> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
                     onPressed: () async{
+                      try{
                       PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: MyPhone.verify, smsCode:code);
-
                       // Sign the user in (or link) with the credential
                       await auth.signInWithCredential(credential);
                       Navigator.pushNamedAndRemoveUntil(
-                        context,
-                        'location',
-                            (route) => false,
-                      );
+                        context, 'location', (route) => false,);
+                      }catch (e) {
+                        print("wrong otp");
+                      }
+
                     },
                     child: Text("Verify & Proceed")),
               ),
