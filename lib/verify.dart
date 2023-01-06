@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:phone_otp_ui/phone.dart';
 import 'package:pinput/pinput.dart';
+
 
 class MyVerify extends StatefulWidget {
   const MyVerify({Key? key}) : super(key: key);
@@ -9,6 +12,7 @@ class MyVerify extends StatefulWidget {
 }
 
 class _MyVerifyState extends State<MyVerify> {
+  final FirebaseAuth auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
@@ -34,10 +38,9 @@ class _MyVerifyState extends State<MyVerify> {
         color: Color.fromRGBO(234, 239, 243, 1),
       ),
     );
-
+     var code ="";
     return Scaffold(
       backgroundColor: Colors.white,
-      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(
@@ -85,11 +88,10 @@ class _MyVerifyState extends State<MyVerify> {
                 height: 30,
               ),
               Pinput(
-                length: 4,
-                // defaultPinTheme: defaultPinTheme,
-                // focusedPinTheme: focusedPinTheme,
-                // submittedPinTheme: submittedPinTheme,
-
+                length: 6,
+                onChanged: (value){
+                  code=value;
+                },
                 showCursor: true,
                 onCompleted: (pin) => print(pin),
               ),
@@ -104,7 +106,11 @@ class _MyVerifyState extends State<MyVerify> {
                         primary: Colors.blueAccent[200],
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
-                    onPressed: () {
+                    onPressed: () async{
+                      PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: MyPhone.verify, smsCode:code);
+
+                      // Sign the user in (or link) with the credential
+                      await auth.signInWithCredential(credential);
                       Navigator.pushNamedAndRemoveUntil(
                         context,
                         'location',
@@ -150,13 +156,8 @@ class _MyVerifyState extends State<MyVerify> {
                         style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)
 
                     ),
-
-
                   ),
-
                 ],
-
-
               ),
             ],
           ),

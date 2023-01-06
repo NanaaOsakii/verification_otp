@@ -30,8 +30,6 @@ class _MySuccesState extends State<MySucces> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

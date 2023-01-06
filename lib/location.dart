@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'dart:async';
+
 
 
 
@@ -11,6 +11,7 @@ class MyLocation extends StatefulWidget {
   @override
   State<MyLocation> createState() => _MyLocationState();
 
+
 }
 
 class _MyLocationState extends State<MyLocation> {
@@ -19,9 +20,11 @@ class _MyLocationState extends State<MyLocation> {
   TextEditingController countryController = TextEditingController();
 
 
+
   Future<bool> _handleLocationPermission() async {
     bool serviceEnabled;
     LocationPermission permission;
+
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
@@ -100,7 +103,6 @@ class _MyLocationState extends State<MyLocation> {
       ),
 
       body: Container(
-
         margin: EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
         child: SingleChildScrollView(
@@ -123,15 +125,12 @@ class _MyLocationState extends State<MyLocation> {
                 height: 30,
               ),
 
-
               Container(
-
                 height: 55,
                 decoration: BoxDecoration(
 
-                    border: Border.all(width: 1, color: Colors.black),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -153,10 +152,8 @@ class _MyLocationState extends State<MyLocation> {
                       "ADDRESS  1",
                       style: TextStyle(color: Colors.grey),
                     ),
-
-
                     Text(' ${_currentPosition?.latitude ?? ""}'),
-                    Text(': ${_currentPosition?.longitude ?? ""}'),
+                    Text(' ${_currentPosition?.longitude ?? ""}'),
                     Text(' ${_currentAddress ?? ""}'),
                     const SizedBox(height: 32),
                     SizedBox(
@@ -167,27 +164,21 @@ class _MyLocationState extends State<MyLocation> {
                           keyboardType: TextInputType.streetAddress,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-
                           ),
                         ),),
-
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
 
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
-
-                    border: Border.all(width: 1, color: Colors.black),
+                    border: Border.all(width: 1 , color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     SizedBox(
                       width: 10,
                     ),
@@ -218,23 +209,19 @@ class _MyLocationState extends State<MyLocation> {
 
                         ),
                       ),),
-
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
-
-                    border: Border.all(width: 1, color: Colors.black),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     SizedBox(
                       width: 10,
                     ),
@@ -252,9 +239,6 @@ class _MyLocationState extends State<MyLocation> {
                       "TOWN/CITY :",
                       style: TextStyle(color: Colors.grey),
                     ),
-
-
-
                     const SizedBox(height: 32),
                     SizedBox(
                       width: 10,
@@ -264,26 +248,21 @@ class _MyLocationState extends State<MyLocation> {
                         keyboardType: TextInputType.streetAddress,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-
                         ),
                       ),),
-
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
-
-                    border: Border.all(width: 1, color: Colors.black),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     SizedBox(
                       width: 10,
                     ),
@@ -301,7 +280,6 @@ class _MyLocationState extends State<MyLocation> {
                       "COUNTRY    :",
                       style: TextStyle(color: Colors.grey),
                     ),
-
                     SizedBox(
                       width: 10,
                     ),
@@ -313,23 +291,19 @@ class _MyLocationState extends State<MyLocation> {
 
                         ),
                       ),),
-
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+
               Container(
 
                 height: 55,
                 decoration: BoxDecoration(
-
-                    border: Border.all(width: 1, color: Colors.black),
+                    border: Border.all(width: 1, color: Colors.grey),
                     borderRadius: BorderRadius.circular(10)),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     SizedBox(
                       width: 10,
                     ),
@@ -348,7 +322,6 @@ class _MyLocationState extends State<MyLocation> {
                       style: TextStyle(color: Colors.grey),
                     ),
 
-
                     SizedBox(
                       width: 10,
                     ),
@@ -360,11 +333,10 @@ class _MyLocationState extends State<MyLocation> {
 
                         ),
                       ),),
-
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+
               Container(
                 child: Column(
 
@@ -386,14 +358,11 @@ class _MyLocationState extends State<MyLocation> {
                               borderRadius: BorderRadius.circular(10))),
                     ),
                    ),
-
                   ],
                 ),
-
-
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
 
               Row(
@@ -416,7 +385,6 @@ class _MyLocationState extends State<MyLocation> {
 
 
                   ),
-
                 ],
               ),
               SizedBox(
@@ -425,8 +393,6 @@ class _MyLocationState extends State<MyLocation> {
               Column(
                 children: [
                   TextButton(
-
-
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
@@ -440,19 +406,11 @@ class _MyLocationState extends State<MyLocation> {
                       color: Colors.black,
 
                     ),
-
-
-
                   ),
                 ],
 
               ),
-
-
-
             ],
-
-
           ),
         ),
       ),

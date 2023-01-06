@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+
 
 class MyPhone extends StatefulWidget {
   const MyPhone({Key? key}) : super(key: key);
+  static String verify= "";
 
   @override
   State<MyPhone> createState() => _MyPhoneState();
 }
 
 class _MyPhoneState extends State<MyPhone> {
-  TextEditingController countryController = TextEditingController();
+  TextEditingController countrycode = TextEditingController();
+  var phone="";
 
   @override
   void initState() {
     // TODO: implement initState
-    countryController.text = "+212";
+    countrycode.text = "+212";
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +32,8 @@ class _MyPhoneState extends State<MyPhone> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/ot.png",
+              Image.asset(
+                "images/ot.png",
                 width: 250,
                 height: 250,
               ),
@@ -37,7 +42,10 @@ class _MyPhoneState extends State<MyPhone> {
               ),
               Text(
                 "Phone Verification",
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.blueAccent[200]),
+                style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent[200]),
               ),
               SizedBox(
                 height: 10,
@@ -66,7 +74,7 @@ class _MyPhoneState extends State<MyPhone> {
                     SizedBox(
                       width: 40,
                       child: TextField(
-                        controller: countryController,
+                        controller: countrycode,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -82,6 +90,9 @@ class _MyPhoneState extends State<MyPhone> {
                     ),
                     Expanded(
                         child: TextField(
+                          onChanged: (value){
+                            phone=value;
+                          },
                           keyboardType: TextInputType.phone,
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -102,14 +113,24 @@ class _MyPhoneState extends State<MyPhone> {
                         primary: Colors.blueAccent[200],
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
-                    onPressed: () {
+                    onPressed: () async{
+                      await FirebaseAuth.instance.verifyPhoneNumber(
+                        phoneNumber: '${countrycode.text+phone}',
+                        verificationCompleted: (PhoneAuthCredential credential) {},
+                        verificationFailed: (FirebaseAuthException e) {},
+                        codeSent: (String verificationId, int? resendToken) {
+                          MyPhone.verify=verificationId;
+                        },
+                        codeAutoRetrievalTimeout: (String verificationId) {},
+                      );
                       Navigator.pushNamed(context, 'verify');
                     },
+                    
                     child: Text("GET OTP")),
               )
+
             ],
           ),
-
         ),
       ),
     );
