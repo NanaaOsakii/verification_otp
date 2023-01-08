@@ -28,12 +28,12 @@ class _MyPhoneState extends State<MyPhone> {
           backgroundColor: Colors.transparent,
           leading: IconButton(
             onPressed: () {
-    Navigator.pushNamedAndRemoveUntil(
-      context,
-      'verify',
-          (route) => false,
-    );
-  },
+            Navigator.pushNamedAndRemoveUntil(
+             context,
+             'verify',
+                 (route) => false,
+             );
+              },
             icon: Icon(
               Icons.arrow_back_ios_rounded,
               color: Colors.black,

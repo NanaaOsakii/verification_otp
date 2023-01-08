@@ -72,7 +72,7 @@ class _MyLocationState extends State<MyLocation> {
           onPressed: () {
             Navigator.pushNamedAndRemoveUntil(
               context,
-              'phone',
+              'verify',
                   (route) => false,
             );
           },

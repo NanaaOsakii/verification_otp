@@ -56,7 +56,7 @@ class _MySuccesState extends State<MySucces> {
                 height: 80,
               ),
 
-              Image.asset("images/illustration-1.png",width: 240,),
+              Image.asset("images/illustration-1.png",width: 230,),
               SizedBox(
                 height: 10,
               ),

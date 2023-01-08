@@ -48,7 +48,11 @@ class _MyVerifyState extends State<MyVerify> {
         backgroundColor: Colors.transparent,
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              'phone',
+                  (route) => false,
+            );
           },
           icon: Icon(
             Icons.arrow_back_ios_rounded,
@@ -150,7 +154,7 @@ class _MyVerifyState extends State<MyVerify> {
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        'location',
+                        'verify',
                             (route) => false,
                       );
                     },
