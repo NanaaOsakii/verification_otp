@@ -39,7 +39,9 @@ class _MyVerifyState extends State<MyVerify> {
       ),
     );
      var code ="";
-    return Scaffold(
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
 
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -128,7 +130,7 @@ class _MyVerifyState extends State<MyVerify> {
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        'location',
+                        'verify',
                             (route) => false,
                       );
                     },
@@ -142,15 +144,13 @@ class _MyVerifyState extends State<MyVerify> {
                 ],
               ),
               Column(
-
                 children: [
-
                   TextButton(
 
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        'phone',
+                        'location',
                             (route) => false,
                       );
                     },
@@ -166,6 +166,7 @@ class _MyVerifyState extends State<MyVerify> {
           ),
         ),
       ),
+        ),
     );
   }
 }

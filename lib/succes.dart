@@ -16,7 +16,7 @@ class _MySuccesState extends State<MySucces> {
     super.initState();
 
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 4),
           () =>
           Navigator.pushReplacement(
             context,
@@ -27,67 +27,77 @@ class _MySuccesState extends State<MySucces> {
     );
   }
 
+
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            AnimatedTextKit(
-              animatedTexts: [
-                ScaleAnimatedText(
-                  'Your registration was successful',
-                  textStyle: TextStyle(fontSize: 25.0, fontFamily: 'Bobbers',fontWeight: FontWeight.bold,color: Colors.blueAccent[200],),
-                ),
+    return MaterialApp(
 
-              ],
-            ),
-            SizedBox(
-              height: 100,
-            ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white,
 
-            Image.asset("images/illustration-1.png",width: 240,),
-            SizedBox(
-              height: 10,
-            ),
+        body: Center(
 
-            Text("", textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueAccent[200],
-              ),
-            ),
-            Column(
-              children: [
-                TextButton(
+          child: Column(
 
+            mainAxisAlignment: MainAxisAlignment.center,
 
-                  onPressed: () {
-                    Navigator.pushNamedAndRemoveUntil(
-                      context,
-                      'succes',
-                          (route) => false,
-                    );
-                  },
-
-                  child: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-
+            children: [
+              const SizedBox(height: 120),
+              AnimatedTextKit(
+                animatedTexts: [
+                  ScaleAnimatedText(
+                    'Your registration was successful !',
+                    textStyle: TextStyle(fontSize: 25.0, fontFamily: 'Bobbers',fontWeight: FontWeight.bold,color: Colors.black),
                   ),
 
+                ],
+              ),
+              SizedBox(
+                height: 80,
+              ),
 
+              Image.asset("images/illustration-1.png",width: 240,),
+              SizedBox(
+                height: 10,
+              ),
 
+              Text("", textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blueAccent[200],
                 ),
-              ],
+              ),
+              Column(
+                children: [
+                  TextButton(
 
-            ),
-          ],
+
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        'succes',
+                            (route) => false,
+                      );
+                    },
+
+                    child: Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      color: Colors.black,
+
+                    ),
+
+
+
+                  ),
+                ],
+
+              ),
+            ],
+
+          ),
 
         ),
-
       ),
     );
   }
