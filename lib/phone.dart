@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 
 class MyPhone extends StatefulWidget {
   const MyPhone({Key? key}) : super(key: key);
@@ -12,13 +13,15 @@ class MyPhone extends StatefulWidget {
 class _MyPhoneState extends State<MyPhone> {
   TextEditingController countrycode = TextEditingController();
   var phone="";
+  final countryPicker = const FlCountryCodePicker();
+  CountryCode? countryCode;
 
-  @override
   void initState() {
     // TODO: implement initState
     countrycode.text = "+212";
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -86,11 +89,25 @@ class _MyPhoneState extends State<MyPhone> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        width: 10,
+                      GestureDetector(
+                        onTap: () async {
+                          final code = await countryPicker.showPicker(context: context);
+                          setState(() {
+                            countryCode=code;
+                          });
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 2, vertical: 2),
+                          margin: const EdgeInsets.symmetric(horizontal: 15),
+
+                          child: Text(countryCode?.dialCode ?? "+1",
+                              style: const TextStyle(color: Colors.black)),
+                        ),
                       ),
+
                       SizedBox(
-                        width: 40,
+                        width: 1,
                         child: TextField(
                           controller: countrycode,
                           keyboardType: TextInputType.number,
@@ -103,6 +120,7 @@ class _MyPhoneState extends State<MyPhone> {
                         "|",
                         style: TextStyle(fontSize: 33, color: Colors.grey),
                       ),
+
                       SizedBox(
                         width: 10,
                       ),
@@ -118,6 +136,7 @@ class _MyPhoneState extends State<MyPhone> {
                             ),
                           ))
                     ],
+
                   ),
                 ),
                 SizedBox(

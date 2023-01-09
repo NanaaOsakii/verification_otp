@@ -16,7 +16,7 @@ class _MySuccesState extends State<MySucces> {
     super.initState();
 
     Timer(
-      Duration(seconds: 4),
+      Duration(seconds: 3),
           () =>
           Navigator.pushReplacement(
             context,
@@ -68,31 +68,7 @@ class _MySuccesState extends State<MySucces> {
                   color: Colors.blueAccent[200],
                 ),
               ),
-              Column(
-                children: [
-                  TextButton(
 
-
-                    onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                        context,
-                        'succes',
-                            (route) => false,
-                      );
-                    },
-
-                    child: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.black,
-
-                    ),
-
-
-
-                  ),
-                ],
-
-              ),
             ],
 
           ),

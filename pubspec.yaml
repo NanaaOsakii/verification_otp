@@ -40,6 +40,7 @@ dependencies:
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
   animated_text_kit: ^4.2.2
+  fl_country_code_picker: ^0.0.4
 
 
 dev_dependencies:
