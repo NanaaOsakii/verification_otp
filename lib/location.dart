@@ -85,7 +85,7 @@ class _MyLocationState extends State<MyLocation> {
       ),
 
       body: Container(
-        margin: EdgeInsets.only(left: 10, right: 10),
+        margin: EdgeInsets.only(left: 15, right: 15),
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Column(

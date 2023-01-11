@@ -134,7 +134,7 @@ class _MyVerifyState extends State<MyVerify> {
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        'verify',
+                        'phone',
                             (route) => false,
                       );
                     },
