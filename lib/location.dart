@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 
-
-
-
 class MyLocation extends StatefulWidget {
   const MyLocation({Key? key}) : super(key: key);
 
   @override
   State<MyLocation> createState() => _MyLocationState();
-
 
 }
 
@@ -59,7 +55,6 @@ class _MyLocationState extends State<MyLocation> {
     setState(()  {
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -136,17 +131,12 @@ class _MyLocationState extends State<MyLocation> {
                     SizedBox(
                       width: 10,
                     ),
-
-
-
                   ],
                 ),
               ),
 
-
               const SizedBox(height: 20),
               Container(
-
                 height: 55,
                 decoration: BoxDecoration(
                     border: Border.all(width: 1, color: Colors.black),
@@ -186,7 +176,6 @@ class _MyLocationState extends State<MyLocation> {
                 ),
               ),
               const SizedBox(height: 20),
-
               Container(
                 child: Column(
 
@@ -211,7 +200,6 @@ class _MyLocationState extends State<MyLocation> {
               SizedBox(
                 height: 20,
               ),
-
               Row(
                 children: [
                   TextButton(
@@ -227,8 +215,6 @@ class _MyLocationState extends State<MyLocation> {
                       " Reset ?",
                       style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                     ),
-
-
                   ),
                 ],
               ),
@@ -253,7 +239,6 @@ class _MyLocationState extends State<MyLocation> {
                     ),
                   ),
                 ],
-
               ),
             ],
           ),

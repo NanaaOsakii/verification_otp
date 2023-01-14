@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:phone_otp_ui/phone.dart';
 import 'package:pinput/pinput.dart';
 
-
 class MyVerify extends StatefulWidget {
   const MyVerify({Key? key}) : super(key: key);
 
@@ -42,7 +41,6 @@ class _MyVerifyState extends State<MyVerify> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -124,7 +122,6 @@ class _MyVerifyState extends State<MyVerify> {
                       }catch (e) {
                         print("wrong otp");
                       }
-
                     },
                     child: Text("Verify & Proceed")),
               ),

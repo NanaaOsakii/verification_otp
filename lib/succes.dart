@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:phone_otp_ui/phone.dart';
+
 class MySucces extends StatefulWidget {
   const MySucces({Key? key}) : super(key: key);
 
@@ -26,8 +27,6 @@ class _MySuccesState extends State<MySucces> {
           ),
     );
   }
-
-
   Widget build(BuildContext context) {
     return MaterialApp(
 
@@ -49,13 +48,11 @@ class _MySuccesState extends State<MySucces> {
                     'Your registration was successful !',
                     textStyle: TextStyle(fontSize: 25.0, fontFamily: 'Bobbers',fontWeight: FontWeight.bold,color: Colors.black),
                   ),
-
                 ],
               ),
               SizedBox(
                 height: 80,
               ),
-
               Image.asset("images/illustration-1.png",width: 230,),
               SizedBox(
                 height: 10,
@@ -68,11 +65,8 @@ class _MySuccesState extends State<MySucces> {
                   color: Colors.blueAccent[200],
                 ),
               ),
-
             ],
-
           ),
-
         ),
       ),
     );

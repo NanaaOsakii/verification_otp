@@ -17,8 +17,6 @@ void main() async{
       'location': (context) => MyLocation(),
       'succes': (context) => MySucces(),
 
-
     },
-
   ));
 }

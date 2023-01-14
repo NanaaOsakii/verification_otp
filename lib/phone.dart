@@ -48,7 +48,6 @@ class _MyPhoneState extends State<MyPhone> {
         body: Container(
         margin: EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
-
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -105,7 +104,6 @@ class _MyPhoneState extends State<MyPhone> {
                               style: const TextStyle(color: Colors.black)),
                         ),
                       ),
-
                       SizedBox(
                         width: 1,
                         child: TextField(
@@ -120,7 +118,6 @@ class _MyPhoneState extends State<MyPhone> {
                         "|",
                         style: TextStyle(fontSize: 33, color: Colors.grey),
                       ),
-
                       SizedBox(
                         width: 10,
                       ),
@@ -136,7 +133,6 @@ class _MyPhoneState extends State<MyPhone> {
                             ),
                           ))
                     ],
-
                   ),
                 ),
                 SizedBox(
@@ -166,15 +162,9 @@ class _MyPhoneState extends State<MyPhone> {
                       child: Text("GET OTP")),
                 )
               ],
-
             ),
-
-
           ),
-
-
       ),
-
       ),
     );
   }
